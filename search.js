@@ -7,7 +7,7 @@ fetch('articles.json')
     .then(data => articles = data)
     .catch(err => console.error('Error loading articles:', err));
 
-function searchArticles() {
+window.searchArticles = function() {
     const query = document.getElementById('searchInput').value.toLowerCase();
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
